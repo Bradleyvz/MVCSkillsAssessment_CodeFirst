@@ -54,19 +54,38 @@
                 @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--Hard Coded Country Drop Down List-->
         <div class="form-group">
             @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DropDownList("Country", new List<SelectListItem>{
+                 new  SelectListItem {Text="South Africa", Value="South Africa" ,Selected=true},
+                 new  SelectListItem {Text="Namibia", Value="Namibia"},
+                 new  SelectListItem {Text="Zimbabwe", Value="Zimbabwe"},
+                 new  SelectListItem {Text="Zambia", Value="Zambia"},
+                 new  SelectListItem {Text="England", Value="England"},
+                 new  SelectListItem {Text="America", Value="America"},
+                 new  SelectListItem {Text="Australia", Value="Australia"},
+                 new  SelectListItem {Text="Mexico", Value="Mexico"},
+                 new  SelectListItem {Text="Dubai", Value="Dubai"},
+                 new  SelectListItem {Text="Spain", Value="Spain"},
+
+
+                 },  "Select Country" ) 
                 @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <!--FAvourite Colour Hard Coded Radio Button RED/GREEN/BLUE-->
         <div class="form-group">
             @Html.LabelFor(model => model.FavouriteColour, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.FavouriteColour, new { htmlAttributes = new { @class = "form-control" } })
+                Red
+                @Html.RadioButtonFor(Model => Model.FavouriteColour, "Red")
+                Blue
+                @Html.RadioButtonFor(Model => Model.FavouriteColour, "Blue")
+                Green
+                @Html.RadioButtonFor(Model => Model.FavouriteColour, "Green")
+
                 @Html.ValidationMessageFor(model => model.FavouriteColour, "", new { @class = "text-danger" })
             </div>
         </div>
