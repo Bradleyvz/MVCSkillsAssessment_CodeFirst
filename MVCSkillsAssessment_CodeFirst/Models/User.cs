@@ -29,7 +29,7 @@ namespace MVCSkillsAssessment_CodeFirst.Models
         [Display(Name = "Password")]
         [Required(ErrorMessage = "Password is Required.")]
         [DataType(DataType.Password)]
-        [RegularExpression(@"? -i)(?= ^.{8,}$)((?!.*\s)(?=.*[A - Z])(?=.*[a - z]))(?=(1)(?=.*\d)|.*[^A - Za - z0 - 9])^.*$", ErrorMessage = "Password must be atleast 8 example Abcd!@un")]
+        [RegularExpression(@"((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W_]).{8,15})", ErrorMessage = "Password must be atleast 8 example Abcd!@un")]
         public string Password { get; set; }
 
         [Display(Name = "Confirm Password")]
@@ -56,8 +56,6 @@ namespace MVCSkillsAssessment_CodeFirst.Models
         [Display(Name = "Comments")]
         [DataType(DataType.MultilineText)]
         public string Comments { get; set; }
-
-        public int test { get; set; }
     }
 }
     

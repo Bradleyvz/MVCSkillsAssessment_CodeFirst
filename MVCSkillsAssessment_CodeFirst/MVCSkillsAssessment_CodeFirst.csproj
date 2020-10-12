@@ -170,12 +170,21 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202010121217083_InitialMigration.cs" />
     <Compile Include="Migrations\202010121217083_InitialMigration.Designer.cs">
       <DependentUpon>202010121217083_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010121242113_ModelUpdate.cs" />
+    <Compile Include="Migrations\202010121242113_ModelUpdate.Designer.cs">
+      <DependentUpon>202010121242113_ModelUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010121245441_ModelRegexUpdate.cs" />
+    <Compile Include="Migrations\202010121245441_ModelRegexUpdate.Designer.cs">
+      <DependentUpon>202010121245441_ModelRegexUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -242,6 +251,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Users\Create.cshtml" />
+    <Content Include="Views\Users\Delete.cshtml" />
+    <Content Include="Views\Users\Details.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
+    <Content Include="Views\Users\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -262,6 +276,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202010121217083_InitialMigration.resx">
       <DependentUpon>202010121217083_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121242113_ModelUpdate.resx">
+      <DependentUpon>202010121242113_ModelUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010121245441_ModelRegexUpdate.resx">
+      <DependentUpon>202010121245441_ModelRegexUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
