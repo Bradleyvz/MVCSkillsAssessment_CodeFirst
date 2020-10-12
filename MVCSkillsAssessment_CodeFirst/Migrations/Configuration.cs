@@ -1,5 +1,6 @@
 namespace MVCSkillsAssessment_CodeFirst.Migrations
 {
+    using MVCSkillsAssessment_CodeFirst.Models;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,10 +15,22 @@ namespace MVCSkillsAssessment_CodeFirst.Migrations
 
         protected override void Seed(MVCSkillsAssessment_CodeFirst.Models.DataContext context)
         {
-            //  This method will be called after migrating to the latest version.
+          //Seed The Database with Dummy Data 
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.users.AddOrUpdate(p=>p.UserID,
+                new User
+                {
+                    Name = "Bradley",
+                    Surname = "Van Zyl",
+                    Email = "bradleyvanzyl2@gmail.com",
+                    Password = "Abcd@1234",
+                    ConfirmPassword = "Abcd@1234",
+                    Country="South Africa",
+                    FavouriteColour = "Red",
+                    Birthday = "1996/01/22",
+                    Cellphone = "0793767813",
+                    Comments = "Comment From Seed."
+                });
         }
     }
 }
